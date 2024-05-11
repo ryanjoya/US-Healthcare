@@ -1,0 +1,14 @@
+# Updating the header to remove 'nan' and set a clearer descriptor
+corrected_header = ['Item']
+for col in table_1_data.columns[1:]:  # Skip 'Item' column
+    year = col.split()[0]  # Extract the year
+    if 'nan' in col:
+        corrected_header.append(f"{year} Amount in Billions")  # Add clearer descriptor
+    else:
+        corrected_header.append(col)
+
+# Update the dataframe columns
+table_1_data.columns = corrected_header
+
+# Show the updated dataframe
+table_1_data.head()
