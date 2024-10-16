@@ -1,0 +1,30 @@
+# Creating a DataFrame with the cost comparisons across various medical procedures in different countries, excluding Japan
+data_excluding_japan = {
+    "Procedure": ["Heart Transplant", "Bone Marrow Transplant", "Lung Transplant", "Liver Transplant", 
+                  "Open Heart Surgery", "Pancreas Transplant", "Kidney Transplant", "Spinal Fusion", 
+                  "Cancer Treatment", "Neurosurgery"],
+    "USA": ["$1.2M - $1.5M", "$350K - $800K", "$800K - $1M+", "$580K - $800K", "$150K - $200K+", 
+            "$125K - $300K", "$300K - $400K", "$80K - $150K+", "$100K - $300K+", "$50K - $300K+"],
+    "UK": ["£100K - £150K", "£50K - £300K", "£80K - £100K", "£70K - £100K", "£20K - £40K", 
+           "£40K - £70K", "£50K - £70K", "£15K - £50K", "£30K - £200K", "£20K - £100K"],
+    "Canada": ["CAD 100K - CAD 200K", "CAD 150K - CAD 300K", "CAD 100K - CAD 200K", "CAD 130K - CAD 250K",
+               "CAD 40K - CAD 100K", "CAD 100K - CAD 200K", "CAD 100K - CAD 150K", "CAD 50K - CAD 110K", 
+               "CAD 50K - CAD 150K", "CAD 40K - CAD 200K"],
+    "Germany": ["€150K - €200K", "€150K - €400K", "€150K - €250K", "€120K - €300K", "€50K - €100K", 
+                "€80K - €150K", "€80K - €120K", "€20K - €80K", "€50K - €200K", "€30K - €200K"],
+    "Australia": ["AUD 120K - AUD 250K", "AUD 150K - AUD 400K", "AUD 100K - AUD 250K", "AUD 150K - AUD 250K",
+                  "AUD 40K - AUD 80K", "AUD 100K - AUD 200K", "AUD 80K - AUD 120K", "AUD 30K - AUD 100K", 
+                  "AUD 20K - AUD 100K", "AUD 20K - AUD 150K"],
+    "India": ["$50K - $100K", "$15K - $30K", "$40K - $100K", "$20K - $50K", "$3K - $10K", "$15K - $40K",
+              "$10K - $20K", "$5K - $15K", "$1K - $30K", "$5K - $50K"],
+    "Thailand": ["$90K - $150K", "$75K - $200K", "$100K - $250K", "$75K - $150K", "$15K - $45K", 
+                 "$25K - $75K", "$25K - $75K", "$7K - $25K", "$3K - $30K", "$15K - $75K"],
+    "Spain": ["€80K - €200K", "€80K - €300K", "€80K - €200K", "€80K - €200K", "€30K - €70K", 
+              "€60K - €100K", "€40K - €100K", "€15K - €60K", "€20K - €100K", "€15K - €80K"],
+    "Brazil": ["$50K - $100K", "$50K - $180K", "$50K - $150K", "$50K - $180K", "$10K - $30K", "$30K - $80K", 
+               "$15K - $50K", "$10K - $40K", "$10K - $50K", "$10K - $100K"]
+}
+
+# Convert to DataFrame
+df_excluding_japan = pd.DataFrame(data_excluding_japan)
+df_excluding_japan
